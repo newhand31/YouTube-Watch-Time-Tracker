@@ -3,11 +3,9 @@
     "name": "YouTube Watch Time Tracker",
     "version": "1.0",
     "permissions": [
-        "scripting",
-        "storage"
-    ],
-    "host_permissions": [
-        "https://www.youtube.com/*"
+        "storage",
+        "activeTab",
+        "scripting"
     ],
     "action": {
         "default_popup": "popup.html",
@@ -21,5 +19,11 @@
         "16": "icon.png",
         "48": "icon.png",
         "128": "icon.png"
-    }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://www.youtube.com/*"
+    ]
 }
